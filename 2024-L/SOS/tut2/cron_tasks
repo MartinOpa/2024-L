@@ -1,5 +1,0 @@
-SHELL=/bin/sh
-PATH=/sbin:/bin:/usr/sbin:/usr/bin
-
-*/1 * * * * root bash /usr/local/bin/cron_script.sh
-
