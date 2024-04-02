@@ -1,0 +1,9 @@
+[Unit]
+Description=Creates a tar backup of the /etc directory
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/boot_backup.sh
+
+[Install]
+WantedBy=default.target
