@@ -1,0 +1,17 @@
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/bin/Debug/net5.0/G1.TXT
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/bin/Debug/net5.0/Grammar
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/bin/Debug/net5.0/Grammar.deps.json
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/bin/Debug/net5.0/Grammar.runtimeconfig.json
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/bin/Debug/net5.0/Grammar.runtimeconfig.dev.json
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/bin/Debug/net5.0/Grammar.dll
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/bin/Debug/net5.0/Grammar.pdb
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/obj/Debug/net5.0/Grammar.GeneratedMSBuildEditorConfig.editorconfig
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/obj/Debug/net5.0/Grammar.AssemblyInfoInputs.cache
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/obj/Debug/net5.0/Grammar.AssemblyInfo.cs
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/obj/Debug/net5.0/Grammar.csproj.CoreCompileInputs.cache
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/obj/Debug/net5.0/Grammar.sourcelink.json
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/obj/Debug/net5.0/Grammar.dll
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/obj/Debug/net5.0/refint/Grammar.dll
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/obj/Debug/net5.0/Grammar.pdb
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/obj/Debug/net5.0/Grammar.genruntimeconfig.cache
+/home/martin/Desktop/Desktop/MMMuni/2024-L/SPJ/lab3/Grammar/Grammar/obj/Debug/net5.0/ref/Grammar.dll
