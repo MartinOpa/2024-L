@@ -43,4 +43,4 @@ while(True):
         mouse.position = (x, y)
         mouse.press(Button.left)
         mouse.release(Button.left)
-        time.sleep(2)
+        time.sleep(0.5)

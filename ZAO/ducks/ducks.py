@@ -9,7 +9,7 @@ import os
 import threading
 
 # https://duckhuntjs.com/
-# 8200
+# 9200
 
 threads = []
 results = []
@@ -37,10 +37,10 @@ def find_target(i, src):
         bottom_right = (top_left[0] + temp_w, top_left[1] + temp_h)
 
         if i & 1 == 0:
-            x = bottom_right[0] + int(temp_w/4)
+            x = bottom_right[0] + int(temp_w/3)
             y = int((top_left[1] + bottom_right[1])/2)
         else:
-            x = top_left[0] - int(temp_w/4)
+            x = top_left[0] - int(temp_w/3)
             y = int((top_left[1] + bottom_right[1])/2)
 
         results.append((max_val, x, y))
@@ -53,7 +53,7 @@ try:
         threads = []
         results = []
         src = cv2.cvtColor(cv2.imread('source.png'), cv2.COLOR_BGR2GRAY)
-        for i in range(10):
+        for i in range(6):
             thread = threading.Thread(target=find_target, args=(i,src))
             threads.append(thread)
             thread.start()
