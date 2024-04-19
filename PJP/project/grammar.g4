@@ -60,9 +60,16 @@ literalExpression :
 
 variableExpression : ID;
 
-unaryExpression : '-' expression;
+unaryExpression : 
+    '-' expression
+    | '!' expression;
 
-binaryExpression : expression ('+'|'-'|'*'|'/'|'%'|'&&'|'||'|'<'|'>'|'=='|'!=') expression;
+binaryExpression : 
+    expression ('*'|'/'|'%') expression
+    | expression ('+'|'-'|'.') expression
+    | expression ('<'|'>') expression
+    | expression ('=='|'!=') expression
+    | expression '&&' expression
+    | expression '||' expression;
 
 assignmentExpression : ID '=' expression;
-
