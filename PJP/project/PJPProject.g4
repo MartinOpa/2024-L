@@ -1,18 +1,30 @@
 grammar PJPProject;
 
+BOOL_LITERAL    : 'true' | 'false';
 INT             : 'int';
 FLOAT           : 'float';
 BOOL            : 'bool';
 STRING          : 'string';
-TRUE            : 'true';
-FALSE           : 'false';
 ID              : [a-zA-Z][a-zA-Z0-9]*;
 INT_LITERAL     : [0-9]+;
 FLOAT_LITERAL   : [0-9]+ '.' [0-9]+;
-BOOL_LITERAL    : TRUE | FALSE;
 STRING_LITERAL  : '"' ( ~["\r\n] | '\\"' )* '"';
 WS              : [ \t\r\n]+ -> skip;
 COMMENT         : '//' ~[\r\n]* -> skip;
+
+ADD         : '+';
+SUB         : '-';
+MUL         : '*';
+DIV         : '/';
+MOD         : '%';
+CONCAT      : '.';
+AND         : '&&';
+OR          : '||';
+GT          : '>';
+LT          : '<';
+EQ          : '==';
+NOTEQ       : '!=';
+NOT         : '!';
 
 program : statement* EOF;
 
@@ -48,7 +60,12 @@ expression :
     literalExpression
     | variableExpression
     | unaryExpression
-    | binaryExpression
+    | expression op=(MUL|DIV|MOD) expression
+    | expression op=(ADD|SUB|CONCAT) expression
+    | expression op=(EQ|NOTEQ) expression
+    | expression op=(LT|GT) expression
+    | expression AND expression
+    | expression OR expression
     | assignmentExpression
     | '(' expression ')';
 
@@ -60,16 +77,9 @@ literalExpression :
 
 variableExpression : ID;
 
-unaryExpression : 
+unaryExpression :
     '-' expression
     | '!' expression;
 
-binaryExpression : 
-    expression ('*'|'/'|'%') expression
-    | expression ('+'|'-'|'.') expression
-    | expression ('<'|'>') expression
-    | expression ('=='|'!=') expression
-    | expression '&&' expression
-    | expression '||' expression;
-
 assignmentExpression : ID '=' expression;
+
