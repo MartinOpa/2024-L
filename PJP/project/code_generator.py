@@ -16,9 +16,6 @@ class CodeGenerator(CustomListener):
                 self.add_label_current('jmp')
                 self.add_label_declare() 
 
-    def exitEmptyStatement(self, ctx:PJPProjectParser.EmptyStatementContext):
-        pass
-
     def exitDeclarationStatement(self, ctx:PJPProjectParser.DeclarationStatementContext):
         for id in ctx.ID():
             id_ = id.getText()
@@ -36,12 +33,6 @@ class CodeGenerator(CustomListener):
                 self.lines.append(f"save {id_}")
             
             self.symbol_table[id_] = ctx.type_().getText()
-
-    def exitType(self, ctx:PJPProjectParser.TypeContext):
-        pass
-
-    def exitExpressionStatement(self, ctx:PJPProjectParser.ExpressionStatementContext):
-        pass
 
     def exitReadStatement(self, ctx:PJPProjectParser.ReadStatementContext):
         for id in ctx.ID():
@@ -61,9 +52,6 @@ class CodeGenerator(CustomListener):
     def exitWriteStatement(self, ctx:PJPProjectParser.WriteStatementContext):
         i = len(ctx.expression())
         self.lines.append(f"print {i}")
-
-    def exitBlockStatement(self, ctx:PJPProjectParser.BlockStatementContext):
-        pass
 
     def exitIfStatement(self, ctx:PJPProjectParser.IfStatementContext):
         self.add_label_declare()
@@ -215,3 +203,4 @@ class CodeGenerator(CustomListener):
     def add_label_declare(self):
         self.lines.append(f"label {self.declare_label}")
         self.declare_label += 1
+        
