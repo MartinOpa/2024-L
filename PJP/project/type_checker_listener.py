@@ -85,8 +85,4 @@ class TypeChecker(CustomListener):
                 self.type_error(var_id.symbol.line, var_id.symbol.column, f"Variable '{var_name}' was already declared.")
             else:
                 self.symbol_table[var_name] = data_type
-
-    def exitProgram(self, ctx: PJPProjectParser.ProgramContext):    
-        # for var_name, var_type in self.symbol_table.items():
-        #     print(f"{var_name}: {var_type}")
-        pass
+                

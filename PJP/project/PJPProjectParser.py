@@ -1133,7 +1133,7 @@ class PJPProjectParser ( Parser ):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
                         self.state = 138
-                        self.match(PJPProjectParser.AND)
+                        localctx.op = self.match(PJPProjectParser.AND)
                         self.state = 139
                         self.expression(5)
                         pass
@@ -1146,7 +1146,7 @@ class PJPProjectParser ( Parser ):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
                         self.state = 141
-                        self.match(PJPProjectParser.OR)
+                        localctx.op = self.match(PJPProjectParser.OR)
                         self.state = 142
                         self.expression(4)
                         pass

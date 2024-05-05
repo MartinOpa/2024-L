@@ -17,9 +17,14 @@ class CustomListener(PJPProjectListener):
             left_type = self.get_expression_type(ctx.expression(0))
             right_type = self.get_expression_type(ctx.expression(1))
             if left_type == right_type:
-                return left_type
+                if ctx.op.text in ['<', '>', '!=', '==']:
+                    return 'bool'
+                else:
+                    return left_type
             else:
                 return None
+        elif ctx.getChild(0).getText() == '(':
+            return self.get_expression_type(ctx.expression(0))
         else:
             return None
 

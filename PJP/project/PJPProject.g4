@@ -64,8 +64,8 @@ expression :
     | expression op=(ADD|SUB|CONCAT) expression
     | expression op=(EQ|NOTEQ) expression
     | expression op=(LT|GT) expression
-    | expression AND expression
-    | expression OR expression
+    | expression op=AND expression
+    | expression op=OR expression
     | assignmentExpression
     | '(' expression ')';
 

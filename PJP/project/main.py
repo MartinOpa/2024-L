@@ -8,8 +8,8 @@ from type_checker_listener import TypeChecker
 from type_checker_visitor import TypeCheckerVisitor
 from code_generator import CodeGenerator
 
-def try_execute():
-    input_file = open('inputs/PLC_t3.in', 'r').read()
+def try_execute(file):
+    input_file = open(f'inputs/{file}.in', 'r').read()
     input_stream = InputStream(input_file)
 
     lexer = PJPProjectLexer(input_stream)
@@ -38,8 +38,13 @@ def try_execute():
     code_generator = CodeGenerator()
     walker = ParseTreeWalker()
     walker.walk(code_generator, tree)
+    with open(f'outputs/{file}.out', 'w') as file:
+        for line in code_generator.lines:
+            file.write(line + '\n')
 
     # interpret
 
 
-try_execute()
+#try_execute('PLC_t1')
+#try_execute('PLC_t2')
+try_execute('PLC_t3')
